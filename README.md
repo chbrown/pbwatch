@@ -11,7 +11,7 @@ Polling NSPasteboard (Mac OS X's copy & paste handler) for changes.
 
 The main NSPasteboard reference:
 
-* [https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html]
+* https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html
 
 From Mac OS X documentation site:
 
@@ -52,7 +52,7 @@ Not sure if this would be any help, it's just a bunch of integers:
 
 Verbose example project:
 
-* [https://developer.apple.com/library/mac/samplecode/ClipboardViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008825-Intro-DontLinkElementID_2]
+* https://developer.apple.com/library/mac/samplecode/ClipboardViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008825-Intro-DontLinkElementID_2
 
 ## License
 
