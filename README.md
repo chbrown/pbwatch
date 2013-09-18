@@ -2,16 +2,10 @@
 
 Polling NSPasteboard (Mac OS X's copy & paste handler) for changes.
 
-### Outtakes:
-
-    from ScriptingBridge import NSPasteboardItem, NSPasteboardFilter, NSFilterServicesPasteboard
-
 
 ## Mac OS X documentation
 
-The main NSPasteboard reference:
-
-* https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html
+[The main NSPasteboard reference](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html)
 
 From Mac OS X documentation site:
 
@@ -50,9 +44,8 @@ Not sure if this would be any help, it's just a bunch of integers:
 
     NSString.availableStringEncodings()
 
-Verbose example project:
+Verbose Apple [example project](https://developer.apple.com/library/mac/samplecode/ClipboardViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008825-Intro-DontLinkElementID_2)
 
-* https://developer.apple.com/library/mac/samplecode/ClipboardViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008825-Intro-DontLinkElementID_2
 
 ## License
 
