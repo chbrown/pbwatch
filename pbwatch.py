@@ -15,7 +15,14 @@ def poll(last_changeCount, separator):
         # pb.types() will return a list of strings describing the available types currently on the pasteboard
         # show types available:
         available_types = pb.types()
-        logging.debug('types: %s', ', '.join(available_types))
+        logger.debug('types: %s', ', '.join(available_types))
+
+        # if 'public.html' in available_types:
+        #     data = pb.dataForType_('public.html')
+        #     print 'data', data
+        #     string = NSString.alloc().initWithData_encoding_(data, NSUTF8StringEncoding)
+        #     print 'string', data
+
         # pb.availableTypeFromArray_(...) takes a list of strings and intersects it with the actually available types
         # pb.pasteboardItems() will return a list of NSPasteboardItem objects. Not sure what these are but Pasteboard-subsets.
         # pb.dataForType_(...) will return a single NSData object, if the specified type is available.
@@ -27,7 +34,7 @@ def poll(last_changeCount, separator):
             if separator:
                 logger.info(separator)
         else:
-            logging.error('No supported types found.')
+            logger.error('No supported types found.')
     return current_changeCount
 
 
@@ -38,18 +45,24 @@ def main():
     parser.add_argument('--stdout', action='store_true', help='Output to stdout')
     parser.add_argument('-s', '--separator', help='Clibpoard contents separator')
     parser.add_argument('-i', '--interval', type=float, help='Polling interval', default=0.5)
+    parser.add_argument('-v', '--verbose', action='store_true', help='Print extra information')
+
     # e.g., use -s $'\n---\n' to put an empty line between each dump and --- separator
     opts = parser.parse_args()
+
+    logger.setLevel(logging.DEBUG if opts.verbose else logging.INFO)
 
     if opts.filename:
         # logging.FileHandler(filename, mode='a', encoding=None, delay=False)
         file_handler = logging.FileHandler(opts.filename)
         logger.addHandler(file_handler)
+        logger.debug('Writing to file: %s', opts.filename)
 
     if opts.stdout or not opts.filename:
         # logging.StreamHandler(stream=None)
         stream_handler = logging.StreamHandler(sys.stdout)
         logger.addHandler(stream_handler)
+        logger.debug('Writing to STDOUT')
 
     last_changeCount = 0
     while True:

@@ -47,6 +47,15 @@ Not sure if this would be any help, it's just a bunch of integers:
 Verbose Apple [example project](https://developer.apple.com/library/mac/samplecode/ClipboardViewer/Introduction/Intro.html#//apple_ref/doc/uid/DTS40008825-Intro-DontLinkElementID_2)
 
 
+## Todo:
+
+Watch for html pasteboard types and convert to Markdown, using one of:
+
+* [html.md](https://github.com/neocotic/html.md) (Node.js)
+* [to-markdown](https://github.com/domchristie/to-markdown) (Node.js)
+* [html2text](https://github.com/aaronsw/html2text) (Python)
+
+
 ## License
 
 Copyright (c) 2013 Christopher Brown. [MIT Licensed](LICENSE).
