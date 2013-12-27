@@ -55,6 +55,8 @@ Watch for html pasteboard types and convert to Markdown, using one of:
 * [to-markdown](https://github.com/domchristie/to-markdown) (Node.js)
 * [html2text](https://github.com/aaronsw/html2text) (Python)
 
+Also, maybe serve these lines as a file socket. E.g., `/dev/clipboard`, and if I `tail -f /dev/clipboard`, I can watch the output there.
+
 
 ## License
 
